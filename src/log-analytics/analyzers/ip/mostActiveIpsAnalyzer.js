@@ -1,18 +1,13 @@
+import BaseIpAnalyzer from "./baseIpAnalyzer.js";
+
 /**
  * Analyzer to identify the top 3 most active IP addresses from log data.
  * Processes log entries to count occurrences of each IP address.
  * Provides methods to retrieve and log the top 3 most active IPs.
  */
-class MostActiveIpsAnalyzer {
+class MostActiveIpsAnalyzer extends BaseIpAnalyzer {
     constructor() {
-        this.ipCounts = new Map();
-    }
-
-    process(log) {
-        // Process each log entry to count IP occurrences
-        if (log?.ip) {
-            this.ipCounts.set(log.ip, (this.ipCounts.get(log.ip) || 0) + 1);
-        }
+        super();
     }
 
     report() {

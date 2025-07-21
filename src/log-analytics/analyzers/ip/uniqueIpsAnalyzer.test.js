@@ -1,5 +1,5 @@
 import { describe, it, expect, vi } from 'vitest';
-import UniqueIpsAnalyzer from './uniqueIpsAnalyzer';
+import UniqueIpsAnalyzer from './uniqueIpsAnalyzer.js';
 
 describe('UniqueIpsAnalyzer', () => {
   const mockLogs = [

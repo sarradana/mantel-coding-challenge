@@ -1,5 +1,5 @@
 import { describe, it, expect, vi } from 'vitest';
-import MostActiveIpsAnalyzer from './mostActiveIpsAnalyzer';
+import MostActiveIpsAnalyzer from './mostActiveIpsAnalyzer.js';
 
 const mockLogs = [
   { ip: '192.168.1.1' },

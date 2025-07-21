@@ -61,3 +61,4 @@ To run the analyzer for the default log file, you can use the following command 
 - Add additional analyzers, such as an ErrorFrequencyAnalyzer.
 - Add CLI options to specify the log file path, log format, and analyzer settings.
 - Add a configuration file to specify the log file path, log format, and analyzer settings.
+- Add more unit/e2e tests to ensure the correctness of the code and its components.

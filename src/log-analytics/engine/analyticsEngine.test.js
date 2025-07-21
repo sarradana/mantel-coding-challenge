@@ -2,7 +2,7 @@ import { describe, it, expect, vi } from 'vitest';
 import AnalyticsEngine from './analyticsEngine';
 import LogReader from '../reader/logReader';
 import LogParser from '../parser/logParser';
-import MostActiveIpsAnalyzer from '../analyzers/mostActiveIpsAnalyzer';
+import MostActiveIpsAnalyzer from '../analyzers/ip/mostActiveIpsAnalyzer.js';
 import path from 'path';
 import { fileURLToPath } from 'url';
 

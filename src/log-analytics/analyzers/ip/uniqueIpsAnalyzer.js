@@ -1,25 +1,20 @@
+import BaseIpAnalyzer from "./baseIpAnalyzer.js";
+
 /**
  * Analyzer to track unique IP addresses from log data.
  * Processes log entries to identify and count unique IPs.
  * Provides methods to retrieve and log the count and list of unique IPs.
  */
-class UniqueIpsAnalyzer {
+class UniqueIpsAnalyzer extends BaseIpAnalyzer {
     constructor() {
-        this.ips = new Set();
-    }
-
-    process(log) {
-      // process each log entry to extract unique IPs
-        if (log?.ip) {
-            this.ips.add(log.ip);
-        }
+        super();
     }
 
     report() {
         // Return the count and list of unique IPs
         return {
-            count: this.ips.size,
-            ips: [...this.ips],
+            count: this.ipCounts.size,
+            ips: [...this.ipCounts.keys()],
         };
     }
 

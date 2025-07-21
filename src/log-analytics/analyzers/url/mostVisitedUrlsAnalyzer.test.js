@@ -1,5 +1,5 @@
 import { describe, it, expect, vi } from 'vitest';
-import MostVisitedUrlsAnalyzer from './mostVisitedUrlsAnalyzer';
+import MostVisitedUrlsAnalyzer from './mostVisitedUrlsAnalyzer.js';
 
 describe('MostVisitedUrlsAnalyzer', () => {
   const mockLogs = [
