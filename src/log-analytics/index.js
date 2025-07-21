@@ -1,6 +1,6 @@
 import LogReader from "./reader/logReader.js";
 import LogParser from "./parser/logParser.js";
-import AnalyticsEngine from "./analyzerEngine/analyticsEngine.js";
+import AnalyticsEngine from "./engine/analyticsEngine.js";
 
 import MostActiveIpsAnalyzer from "./analyzers/mostActiveIpsAnalyzer.js";
 import MostVisitedUrlsAnalyzer from "./analyzers/mostVisitedUrlsAnalyzer.js";

@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import AnalyticsEngine from '../log-analytics/analyzerEngine/analyticsEngine.js';
+import AnalyticsEngine from '../log-analytics/engine/analyticsEngine.js';
 import LogReader from '../log-analytics/reader/logReader.js';
 import LogParser from '../log-analytics/parser/logParser.js';
 import MostActiveIpsAnalyzer from '../log-analytics/analyzers/mostActiveIpsAnalyzer.js';
