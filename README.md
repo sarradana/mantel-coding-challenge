@@ -52,6 +52,7 @@ To run the analyzer for the default log file, you can use the following command 
 
 # Future Improvements
 - Add typing to the code to improve readability and maintainability.
+- Add more unit and E2E tests, and refactor some existing tests by introducing beforeEach hooks—especially in E2E tests with heavy setup logic—to improve test clarity and ensure the correctness of the code and its components.
 - When multiple IPs or URLs have the same number of hits, return all of them, not just the first.
 - Make the Analyzer customizable. For example, allow users to specify how many top items to return.
 - Update the parser to extract all fields from each log entry (e.g., status code, date). Although regex can be used to extract all values, the current implementation keeps things simple and focused on just the IP and URL fields to maintain readability.
@@ -61,4 +62,3 @@ To run the analyzer for the default log file, you can use the following command 
 - Add additional analyzers, such as an ErrorFrequencyAnalyzer.
 - Add CLI options to specify the log file path, log format, and analyzer settings.
 - Add a configuration file to specify the log file path, log format, and analyzer settings.
-- Add more unit/e2e tests to ensure the correctness of the code and its components.

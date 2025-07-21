@@ -10,7 +10,7 @@ import UniqueIpsAnalyzer from "./analyzers/ip/uniqueIpsAnalyzer.js";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-async function main() {
+export default async function main() {
     const reader = new LogReader(path.join(__dirname, '../logs/programming-task-example-data.log'));
     const parser = new LogParser();
     const analyzers = [new MostActiveIpsAnalyzer(), new MostVisitedUrlsAnalyzer(), new UniqueIpsAnalyzer()];
