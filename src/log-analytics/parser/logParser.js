@@ -6,11 +6,16 @@
 
 class LogParser {
   parse(line) {
-    // Updated regex to ignore extra fields at the end of the log line
-    const logRegex = /^(\d{1,3}(?:\.\d{1,3}){3})\s+-\s+(\S+)\s+\[([^\]]+)\]\s+"([A-Z]+)\s+([^\s]+)\s+HTTP\/[\d.]+"\s+(\d{3})\s+(\d+)\s+".*?"\s+".*?".*$/;
+    // Updated regex for better readability
+    const logRegex = new RegExp(
+      `^(?<ip>\\d{1,3}(?:\\.\\d{1,3}){3})\\s+-\\s+(?<user>\\S+)\\s+` + // IP and user identifier
+      `\\[(?<date>[^\\]]+)\\]\\s+"(?<method>[A-Z]+)\\s+(?<url>[^\\s]+)\\s+HTTP/[\\d.]+"\\s+` + // Date, method, and URL
+      `(?<status>\\d{3})\\s+(?<size>\\d+)\\s+".*?"\\s+".*?".*$` // Status, size, and extra fields
+    );
     const match = line.match(logRegex);
 
     if (!match) {
+      console.warn(`Skipping line due to format mismatch: ${line}`);
       return null; // Skip lines that do not match the expected format
     }
 

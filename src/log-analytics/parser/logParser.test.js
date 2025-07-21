@@ -1,4 +1,4 @@
-import { describe, it, expect } from 'vitest';
+import { describe, it, expect, vi } from 'vitest';
 import LogParser from './logParser.js';
 
 describe('LogParser', () => {
@@ -18,8 +18,22 @@ describe('LogParser', () => {
     const parser = new LogParser();
     const logLine = 'Invalid log line';
     const result = parser.parse(logLine);
+    expect(result).toBeNull();
+  });
+
+  it('should log a warning for an invalid log line', () => {
+    const parser = new LogParser();
+    const logLine = 'Invalid log line';
+
+    // Spy on console.warn
+    const consoleSpy = vi.spyOn(console, 'warn');
+
+    const result = parser.parse(logLine);
 
     expect(result).toBeNull();
+    expect(consoleSpy).toHaveBeenCalledWith('Skipping line due to format mismatch: Invalid log line');
+
+    consoleSpy.mockRestore();
   });
 
   it('should handle log lines with junk content', () => {
@@ -32,6 +46,7 @@ describe('LogParser', () => {
       url: '/',
     });
   });
+
   it('should handle log lines with junk content', () => {
     const parser = new LogParser();
     const logLine =
