@@ -1,3 +1,8 @@
+/**
+ * Analyzer to track unique IP addresses from log data.
+ * Processes log entries to identify and count unique IPs.
+ * Provides methods to retrieve and log the count and list of unique IPs.
+ */
 class UniqueIpsAnalyzer {
     constructor() {
         this.ips = new Set();

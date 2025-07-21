@@ -1,3 +1,8 @@
+/**
+ * Analyzer to identify the top 3 most visited URLs from log data.
+ * Processes log entries to count visits to each URL.
+ * Provides methods to retrieve and log the top 3 most visited URLs.
+ */
 class MostVisitedUrlsAnalyzer {
     constructor() {
         this.urls = new Map();

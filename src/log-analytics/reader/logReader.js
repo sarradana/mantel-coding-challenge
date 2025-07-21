@@ -1,6 +1,11 @@
 import fs from 'fs';
 import readline from 'readline';
 
+/**
+ * Reads log files line by line.
+ * Provides an asynchronous generator to iterate through each line of the log file.
+ * Useful for processing large log files efficiently without loading the entire file into memory.
+ */
 export default class LogReader {
     constructor(filePath) {
         this.filePath = filePath;

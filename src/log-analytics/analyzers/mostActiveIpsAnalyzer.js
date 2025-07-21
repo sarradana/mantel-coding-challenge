@@ -1,3 +1,8 @@
+/**
+ * Analyzer to identify the top 3 most active IP addresses from log data.
+ * Processes log entries to count occurrences of each IP address.
+ * Provides methods to retrieve and log the top 3 most active IPs.
+ */
 class MostActiveIpsAnalyzer {
     constructor() {
         this.ipCounts = new Map();
